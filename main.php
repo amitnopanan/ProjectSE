@@ -49,7 +49,8 @@
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<a href="main.php" class="logo pull-left"><img src="Picture/Logo.jpg" class="site_logo" alt=""></a>
+					<a href="main.php" class="logo pull-left"><img src="http://s19.postimg.org/6ednpuz77/Logo.jpg" class="site_logo" alt=""></a>
+
 					<nav id="menu" class="pull-right">
 						<ul>
 							<li><a href="main.php">New Arrivals</a></li>															
@@ -105,83 +106,47 @@
 									<span class="pull-right">
 										<a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
 									</span>
-								</h4>
+								</h4>	
+
+							<?php
+							$conn = new mysqli("127.0.0.1", "root", "", "projectse");
+							if (mysqli_connect_errno()) {
+							echo "Failed to connect to MySQL: " .mysqli_connect_error();
+							}
+							// Search By Name or Email
+							$sql = "SELECT product.*
+							FROM product";
+							$query = mysqli_query($conn,$sql) or die ("Error Query [".$sql."]");
+							$count = 0;
+
+							?>
+								
 								<div id="myCarousel" class="myCarousel carousel slide">
 									<div class="carousel-inner">
 										<div class="active item">
+										<?php
+										while($result = mysqli_fetch_array($query))
+										{
+										?>			
 											<ul class="thumbnails">												
 												<li class="span3">
+
 													<div class="product-box">
 														<span class="sale_tag"></span>
-														<p><a href="product_detail.html"><img src="Picture/Product/missha.png" alt="" /></a></p>
-														<a href="product_detail.html" class="title">MISSHA EYES COLOUR STUDIO<br>SALLY(Line Friends Edition)</a><br/>
-														<a href="products.html" class="category">Eye Shadow</a>
-														<p class="price">$17.25</p>
+														<p><a href="product_detail.html"><img src="<?php echo $result["PictureURL"];?>" alt="" /></a></p>
+														<a href="product_detail.html" class="title"><?php echo $result["ProductName"];?></a><br/>
+														<a href="product_detail.html" class="category"><?php echo $result["ProductType"];?></a>
+														<p class="price">$<?php echo $result["Price"];?></p>
 													</div>
 												</li>
-												<li class="span3">
-													<div class="product-box">
-														<span class="sale_tag"></span>
-														<p><a href="product_detail.html"><img src="themes/images/ladies/2.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$32.50</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/3.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Know exactly turned</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$14.20</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/4.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">You think fast</a><br/>
-														<a href="products.html" class="category">World once</a>
-														<p class="price">$31.45</p>
-													</div>
-												</li>
-												
-											</ul>
-										</div>
-										<div class="item">
-											<ul class="thumbnails">
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/5.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Know exactly</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$22.30</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/6.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-														<a href="products.html" class="category">Commodo consequat</a>
-														<p class="price">$40.25</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/7.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">You think water</a><br/>
-														<a href="products.html" class="category">World once</a>
-														<p class="price">$10.45</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/8.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$35.50</p>
-													</div>
-												</li>																																	
-											</ul>
+										<?php
+										$count++;
+										}
+										?>
+											</ul>										
+									<?php
+									mysqli_close($conn);
+									?>												
 										</div>
 									</div>							
 								</div>
