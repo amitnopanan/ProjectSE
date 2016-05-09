@@ -117,17 +117,15 @@
 							$sql = "SELECT product.*
 							FROM product";
 							$query = mysqli_query($conn,$sql) or die ("Error Query [".$sql."]");
-							$count = 0;
-
+							$count = 0;				
 							?>
-								
 								<div id="myCarousel" class="myCarousel carousel slide">
 									<div class="carousel-inner">
-										<div class="active item">
 										<?php
 										while($result = mysqli_fetch_array($query))
 										{
 										?>			
+											<div class="active item">
 											<ul class="thumbnails">												
 												<li class="span3">
 
@@ -140,7 +138,6 @@
 													</div>
 												</li>
 										<?php
-										$count++;
 										}
 										?>
 											</ul>										
