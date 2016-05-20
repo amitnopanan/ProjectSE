@@ -1,3 +1,0 @@
-<html>
-CosmeticsFace.php
-</html>

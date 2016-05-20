@@ -243,7 +243,7 @@ $strSQL = "SELECT * FROM user WHERE Email = 'Email' ";
                                             <td><img src="<?php echo $result["PictureURL"];?>" alt="" height="42" width="42" /><td>
                                   <?php
                                             echo "<td><a href='admin_editproducts.php?ProductID=".$result['ProductID']."'>Edit</a></td>";
-                                            echo "<td><a href='admin_deleteproducts.php?ProductID   =".$result['ProductID']."'>Delete</a></td><tr>";
+                                            echo "<td><a href='admin_deleteproducts.php?ProductID=".$result['ProductID']."'>Delete</a></td><tr>";
                                   
                                   
                                   ?>

@@ -1,3 +1,0 @@
-<html>
-BestSallers.php
-</html>

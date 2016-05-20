@@ -1,3 +1,0 @@
-<html>
-CosmeticsLips.php
-</html>

@@ -1,3 +1,0 @@
-<html>
-SkinCare.php
-</html>
