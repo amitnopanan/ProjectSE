@@ -5,9 +5,9 @@
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
 class_name: AcceptanceTester
+
 modules:
-    enabled:
-        - PhpBrowser:
-            url: http://127.0.0.1/ProjectSE/
-            
-        - \Helper\Acceptance
+       enabled:
+          - WebDriver:
+             url: 'http://127.0.0.1:81/test/'
+             browser: firefox

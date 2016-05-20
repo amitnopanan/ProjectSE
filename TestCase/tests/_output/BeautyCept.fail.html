@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+		<meta charset="utf-8" />
 		<title>Login Beauty Dessert</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<meta content="" name="description" />
 		<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
 		<!-- bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">      
-		<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">		
-		<link href="themes/css/bootstrappage.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />      
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />		
+		<link rel="stylesheet" href="themes/css/bootstrappage.css" />
 		
 		<!-- global styles -->
-		<link href="themes/css/flexslider.css" rel="stylesheet"/>
-		<link href="themes/css/main.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="themes/css/flexslider.css" />
+		<link rel="stylesheet" href="themes/css/main.css" />
 
 		<!-- scripts -->
 		<script src="themes/js/jquery-1.7.2.min.js"></script>
@@ -26,46 +25,46 @@
 		<![endif]-->
 	</head>
     <body>		
-		<div id="top-bar" class="container">
+		<div class="container" id="top-bar">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" class="search_form">
-						<input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+					<form class="search_form" method="POST">
+						<input type="text" placeholder="eg. T-sirt" class="input-block-level search-query" />
 					</form>
 				</div>
 				<div class="span8">
 					<div class="account pull-right">
 						<ul class="user-menu">				
-							<li><a href="Non_Login.html">Login</a></li>
-							<li><a href="Non_Contact.php">Contact Us</a></li>
-							<li><a href="Non_Giftcard.php">Gift Card</a></li>					
-							<li><a href="Non_Bag.php">Bag</a></li>		
+							<li><a href="Login.html">Login</a></li>
+							<li><a href="Contact.php">Contact Us</a></li>
+							<li><a href="Giftcard.php">Gift Card</a></li>					
+							<li><a href="Bag.php">Bag</a></li>		
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="wrapper" class="container">
+		<div class="container" id="wrapper">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<a href="Non_main.php" class="logo pull-left"><img src="Picture/Logo.jpg" class="site_logo" alt=""></a>
-					<nav id="menu" class="pull-right">
+					<a class="logo pull-left" href="main.php"><img alt="" class="site_logo" src="Picture/Logo.jpg" /></a>
+					<nav class="pull-right" id="menu">
 						<ul>
-							<li><a href="Non_main.php">New Arrivals</a></li>															
-							<li><a href="Non_BestSallers.php">Best Sellers</a></li>			
+							<li><a href="main.php">New Arrivals</a></li>															
+							<li><a href="BestSallers.php">Best Sellers</a></li>			
 							<li><a href="#">Cosmeticst</a>
 								<ul>									
-									<li><a href="Non_Cosmetics.php">All Cosmetics</a></li>
-									<li><a href="Non_CosmeticsFace.php">Face</a></li>
-									<li><a href="Non_CosmeticsEye.php">Eye&Eye Brow</a></li>
-									<li><a href="Non_CosmeticsLips.php">Lips&Cheek</a></li>									
+									<li><a href="Cosmetics.php">All Cosmetics</a></li>
+									<li><a href="CosmeticsFace.php">Face</a></li>
+									<li><a href="CosmeticsEye.php">Eye&amp;Eye Brow</a></li>
+									<li><a href="CosmeticsLips.php">Lips&amp;Cheek</a></li>									
 								</ul>
 							</li>							
 							<li><a href="#">Skin Care</a>
 								<ul>
-									<li><a href="Non_SkinCare.php">All Skin Care</a></li>									
-									<li><a href="Non_SkinCareLotion.php">Lotiob@Emulation</a></li>
-									<li><a href="Non_SkinCareCream.php">Cream</a></li>									
+									<li><a href="SkinCare.php">All Skin Care</a></li>									
+									<li><a href="SkinCareLotion.php">Lotiob@Emulation</a></li>
+									<li><a href="SkinCareCream.php">Cream</a></li>									
 								</ul>
 							</li>
 							<li><a href="Dietary.php">Dietary Supplement</a></li>
@@ -74,85 +73,85 @@
 				</div>
 			</section>		
 			<section class="header_text sub">
-			<img class="pageBanner" src="Picture/cover2.png" alt="New products" >
+			<img alt="New products" src="themes/images/pageBanner.png" class="pageBanner" />
 				<h4><span>Login or Regsiter</span></h4>
 			</section>			
 			<section class="main-content">				
 				<div class="row">
 					<div class="span5">					
 						<h4 class="title"><span class="text"><strong>Login</strong> Form</span></h4>
-						<form action="Non_Login.php" method="POST">
-							<input type="hidden" name="next" value="/">
+						<form method="POST" action="Login.php">
+							<input type="hidden" value="/" name="next" />
 							<fieldset>
 								<div class="control-group">
 									<label class="control-label">Email</label>
 									<div class="controls">
-										<input type="text" name="Email" placeholder="Enter your Email" id="username" class="input-xlarge">
+										<input type="text" class="input-xlarge" id="username" placeholder="Enter your Email" name="Email" />
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Password</label>
 									<div class="controls">
-										<input type="Password" name="Password" placeholder="Enter your Password" id="Password" class="input-xlarge">
+										<input type="Password" class="input-xlarge" id="Password" placeholder="Enter your Password" name="Password" />
 									</div>
 								</div>
 								<div class="control-group">
-									<input tabindex="3" class="btn btn-inverse large" type="submit" id="Login"value="Sign into your account">
-									<hr>
-									<p class="reset">Recover your <a tabindex="4" href="#" title="Recover your username or password">username or password</a></p>
+									<input type="submit" value="Sign into your account" class="btn btn-inverse large" tabindex="3" />
+									<hr />
+									<p class="reset">Recover your <a title="Recover your username or password" href="#" tabindex="4">username or password</a></p>
 								</div>
 							</fieldset>
 						</form>				
 					</div>
 					<div class="span7">					
 						<h4 class="title"><span class="text"><strong>Register</strong> Form</span></h4>
-						<form action="Register.php" method="post" class="form-stacked">
+						<form class="form-stacked" method="post" action="Register.php">
 							<fieldset>
 								<div class="control-group">
 									<label class="control-label">Email address:</label>
 									<div class="controls">
-										<input type="Email" name="Email" placeholder="Enter your Email" class="input-xlarge">
+										<input type="Email" class="input-xlarge" placeholder="Enter your Email" name="Email" />
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Password:</label>
 									<div class="controls">
-										<input type="Password" name="Password" placeholder="Enter your Password" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="Password" />
 									</div>
 								</div>			
 								<div class="control-group">
 									<label class="control-label">Title:</label>
 									<div class="controls">
-										<input type="Password" name="TitleName" placeholder="Enter your Name Title" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="TitleName" />
 									</div>
 								</div>		
 								<div class="control-group">
 									<label class="control-label">First Name:</label>
 									<div class="controls">
-										<input type="Password" name="FirstName" placeholder="Enter your First Name" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="FirstName" />
 									</div>
 								</div>							                            
 								<div class="control-group">
 									<label class="control-label">Last Name:</label>
 									<div class="controls">
-										<input type="Password" name="LastName" placeholder="Enter your Last Name" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="LastName" />
 									</div>
 								</div>							                            
 								<div class="control-group">
 									<label class="control-label">Date of Birth:</label>
 									<div class="controls">
-										<input type="Password" name="DOB" placeholder="Enter your Brithday" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="DOB" />
 									</div>
 								</div>										<div class="control-group">
 									<label class="control-label">Address:</label>
 									<div class="controls">
-										<input type="Password" name="Address" placeholder="Enter your Address" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="Address" />
 									</div>
 								</div>							                            
 								<div class="control-group">
 									<label class="control-label">Phone:</label>
 									<div class="controls">
-										<input type="Password" name="Phone" placeholder="Enter your mobile Phone" class="input-xlarge">
+										<input type="Password" class="input-xlarge" placeholder="Enter your Password" name="Phone" />
 									</div>
 								</div>							                            		                            
 					                            
@@ -161,8 +160,8 @@
 								<div class="control-group">
 									<p>Now that we know who you are. I'm not a mistake! In a comic, you know how you can tell who the arch-villain's going to be?</p>
 								</div>
-								<hr>
-								<div class="actions"><input tabindex="9" class="btn btn-inverse large" type="submit" value="Create your account"></div>
+								<hr />
+								<div class="actions"><input type="submit" value="Create your account" class="btn btn-inverse large" tabindex="9" /></div>
 							</fieldset>
 						</form>					
 					</div>				
@@ -190,14 +189,14 @@
 						</ul>
 					</div>
 					<div class="span5">
-						<p class="logo"><img src="themes/images/logo.png" class="site_logo" alt=""></p>
+						<p class="logo"><img alt="" class="site_logo" src="themes/images/logo.png" /></p>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
-						<br/>
+						<br />
 						<span class="social_icons">
-							<a class="facebook" href="#">Facebook</a>
-							<a class="twitter" href="#">Twitter</a>
-							<a class="skype" href="#">Skype</a>
-							<a class="vimeo" href="#">Vimeo</a>
+							<a href="#" class="facebook">Facebook</a>
+							<a href="#" class="twitter">Twitter</a>
+							<a href="#" class="skype">Skype</a>
+							<a href="#" class="vimeo">Vimeo</a>
 						</span>
 					</div>					
 				</div>	
@@ -214,5 +213,5 @@
 				})
 			});
 		</script>		
-    </body>
-</html>
+    
+</body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1349" height="1375"></canvas></html>
