@@ -5,5 +5,5 @@
 4. Login Name for customer is Email='iigd@hotmail.co.th' Password='prae1812'
 5.User Can Only view the product 
 6. Login Name for admin is Email='amit2506@hotmail.com' Password='amit2506'
-7. admin can add, edit, delete Product by fo to "Product" on the left hand side menu  
+7. admin can add, edit, delete Product by go to "Product" on the left hand side menu  
 
