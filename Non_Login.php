@@ -8,6 +8,7 @@ $strSQL = "SELECT * FROM user WHERE Email = '".mysql_real_escape_string($_POST['
 and Password = '".mysql_real_escape_string($_POST['Password'])."'";
 $objQuery = mysql_query($strSQL);
 
+
 $objResult = mysql_fetch_array($objQuery);
 if(!$objResult)
 {
