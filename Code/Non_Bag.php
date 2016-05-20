@@ -1,0 +1,3 @@
+<html>
+Bag page
+</html>
