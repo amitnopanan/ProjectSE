@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2016 at 10:02 AM
+-- Generation Time: May 20, 2016 at 04:42 PM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -40,16 +40,20 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Quantity`, `ProductType`, `PictureURL`) VALUES
-(1, ' Winny Collagen ', ' 19.99 ', ' 5 ', 'DietarySupplement', ' http://s19.postimg.org/u9y1wxcvn/winny1.png '),
-(2, 'ARITAUM STYLE POP BR', '15', '20', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/o6l2qrbzn/ARITAUM_STYLE_POP_BROW_MASCARA_6_05.jpg'),
-(4, 'DINOPLATZ HIGH LINE ', '10', '10', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/8mdp081v7/DINOPLATZ_HIGH_LINE_Eye_liner_14_65.png'),
-(5, 'ETUDE HOUSE BLING ME', '8', '10', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/rz4l6hrhv/ETUDE_HOUSE_BLING_ME_PRISM_EYES_EYE_LINER_EYE_S.jpg'),
-(6, 'ETUDE HOUSE BLING ME', '7', '5', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/lmu1aedtf/ETUDE_HOUSE_BLING_ME_PRISM_LOOK_AT_MY_EYES_JEWEL.jpg'),
+(1, 'Winny Collagen', '12', '18', 'DietarySupplement', 'http://s19.postimg.org/u9y1wxcvn/winny1.png'),
+(2, 'ARITAUM STYLE POP BR', '15', '25', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/o6l2qrbzn/ARITAUM_STYLE_POP_BROW_MASCARA_6_05.jpg'),
+(5, 'ETUDE HOUSE BLING ME', '8', '15', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/rz4l6hrhv/ETUDE_HOUSE_BLING_ME_PRISM_EYES_EYE_LINER_EYE_S.jpg'),
+(6, 'ETUDE HOUSE BLING ME', '17', '20', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/lmu1aedtf/ETUDE_HOUSE_BLING_ME_PRISM_LOOK_AT_MY_EYES_JEWEL.jpg'),
 (7, 'ETUDE_LASH_PERM_3_ST', '10', '10', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/dilx5nreb/ETUDE_LASH_PERM_3_STEP_VOLUMCARA_MASCARA_11_75.jpg'),
 (8, '3D_VOLUME_FACE_SECRE', '10', '20', 'Cosmetics_Faces', 'http://s19.postimg.org/3mku60lmb/3_D_VOLUME_FACE_SECRET_MULTI_STICK_16_70.jpg'),
 (9, 'ARITAUM_FULL_COVER_B', '15', '20', 'Cosmetics_Faces', 'http://s19.postimg.org/c6483rtyr/ARITAUM_FULL_COVER_BB_CREAM_15_06.jpg'),
 (10, 'ESPOIR_PRO_TAILOR_LI', '42', '12', 'Cosmetics_Faces', 'http://s19.postimg.org/gye1f7omr/ESPOIR_PRO_TAILOR_LIQUID_FOUNDATION_EX_42_61.png'),
-(11, 'A PIEU PURE TINT LIP', '25', '10', 'Cosmetics_Lips&Cheek', 'http://s19.postimg.org/3vievxyer/A_PIEU_PURE_TINT_LIPGLOSS_TINT.jpg');
+(11, 'A PIEU PURE TINT LIP', '10', '12', 'Cosmetics_Lips&Cheek', 'http://s19.postimg.org/3vievxyer/A_PIEU_PURE_TINT_LIPGLOSS_TINT.jpg'),
+(12, 'SHINCHAN_EDITION_A_P', '15', '30', 'Skincare_Cream', 'http://s19.postimg.org/jfch0mlbn/CRAYON_SHINCHAN_EDITION_A_PIEU_GOOD_MORNING_SO.png'),
+(13, 'INNISFREE_ALOE_REVIT', '15', '20', 'Skincare_Lotion&Emulsion', 'http://s19.postimg.org/cq5xklzzn/INNISFREE_ALOE_REVITAL_SOOTHING_GEL_10_14.png'),
+(14, 'Missha Eyes Colour', '12', '10', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/49fm16a2b/missha.png'),
+(16, 'collagenbomb', '12', '10', 'Skincare_Lotion&Emulsion', 'http://s19.postimg.org/7hk3e7wc3/collagenbomb_1.jpg'),
+(17, 'DINOPLATZ_HIGH_LINE_', '12', '10', 'Cosmetics_Eye&EyeBrow', 'http://s19.postimg.org/8mdp081v7/DINOPLATZ_HIGH_LINE_Eye_liner_14_65.png');
 
 -- --------------------------------------------------------
 
@@ -103,7 +107,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ProductID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
