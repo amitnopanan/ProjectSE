@@ -208,43 +208,34 @@ $Price=$_POST['Price'];
 $Quantity=$_POST['Quantity'];
 $ProductType=$_POST['ProductType'];
 $PictureURL=$_POST['PictureURL'];
-
-
 $query3=mysql_query("UPDATE product SET ProductName='$ProductName', Price='$Price', Quantity='$Quantity', ProductType='$ProductType', PictureURL='$PictureURL' WHERE ProductID='$ProductID'");
 if($query3)
 {
-header('location:admin_products.php');
+echo 'Update Done! ';
+echo '<a href= "admin_products.php"> Back to Product Page</a>';
 }
 }
 $query1=mysql_query("select * from product where ProductID='$ProductID'");
 $query2=mysql_fetch_array($query1);
 ?>
-
 <form method="post" action="">
 	Product Name: <br><input type="text" required autocomplete="on" name="ProductName" value="<?php echo $query2['ProductName'] ?>"><br>
 	Price:<br><input type="number"  name="Price" value="<?php echo $query2['Price'] ?>"><br>
 	Quantity:<br><input type="number" required autocomplete="on"  name="Quantity" value="<?php echo $query2['Quantity'] ?>"> <br>
-
 	Product Type:<br>
 	<select name="ProductType" value="<?php echo $query2['ProductType'] ?>"']>
 	<option value="ProductType" >-------Product Type-------</option>
-
 	<option value="Cosmetics_Faces">Cosmetics Faces</option>
 	<option value="Cosmetics_Eye&EyeBrow">Cosmetics Eye&EyeBrow</option>
 	<option value="Cosmetics_Lips&Cheek">Cosmetics Lips&Cheek</option>
 	<option value="Skincare_Lotion&Emulsion">Skincare Lotion&Emulsion</option>
 	<option value="Skincare_Cream">Skincare Cream</option>
 	<option value="DietarySupplement">DietarySupplement</option>
-
 	</select><br>
-
-
 	Picture URL:<br><input type="url" required autocomplete="on" name="PictureURL" value="<?php echo $query2['PictureURL'] ?>"> <br>
-    <button class="submitbtn">Submit Form</button>
-
+    <button class="submitbtn">Recover</button>
 <input type="submit" name="submit" value="update" />
 </form>
-
 <?php
 }
 ?>
