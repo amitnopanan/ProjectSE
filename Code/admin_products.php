@@ -203,18 +203,21 @@ $strSQL = "SELECT * FROM user WHERE Email = 'Email' ";
 
 
 				<?php
+                //connect to Locolhost And Data base “Projectse” 
 				$conn = new mysqli("127.0.0.1", "root", "", "projectse");
-				if (mysqli_connect_errno()) {
+				//show error massage if connect fails 
+                if (mysqli_connect_errno()) {
 				echo "Failed to connect to MySQL: " .mysqli_connect_error();
 				}
-				// Search By Name or Email
-				$sql = "SELECT product.*
+				// select all of product from ‘product’ table in ‘projectse’ database
+                $sql = "SELECT product.*
 				FROM product";
 				$query = mysqli_query($conn,$sql) or die ("Error Query [".$sql."]");
 				$count = 0;				
 				?>
                 <div class="row">
 				  <div class="col-xl-4 col-lg-12">
+                      
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -231,6 +234,7 @@ $strSQL = "SELECT * FROM user WHERE Email = 'Email' ";
                                         </thead>
                                         <tbody>
 								<?php
+                                //fetch result we select from database 	
 								while($result = mysqli_fetch_array($query))
 									{
                                             echo "<td>".$result["ProductID"]."</td>";
@@ -249,7 +253,9 @@ $strSQL = "SELECT * FROM user WHERE Email = 'Email' ";
                                     } ?>	
                                         </tbody>	
                                     </table>
-								<?php mysqli_close($conn); ?>												
+								<?php 
+                                //close database
+                                mysqli_close($conn); ?>												
                                 </div>
                             </div>
                         </div>

@@ -194,18 +194,19 @@
                         <div class="card card-default">
                             <div class="card-block">
                                 <div class="table-responsive">
-
+<!--//Post method to admin_addproducts.php to add products -->
 <form action="admin_addproducts.php" method = "post" >
 <form onsubmit="return false">
-
+    <!--//User input Product Name, type is text If not input will show error massage -->
 	Product Name: <br><input type="text" required autocomplete="on" name="ProductName"><br>
+        <!--//User input Product Price, type is number, If not input will show error massage -->
 	Price:<br><input type="number" required autocomplete="on" name="Price"><br>
+    <!--//User input Quantity of Product; type is number, If not input will show error massage-->
 	Quantity:<br><input type="number" required autocomplete="on"  name="Quantity"> <br>
-
+<!--User select Product Type from the list below-->
 	Product Type:<br>
 	<select name="ProductType" required autocomplete="on">
 	<option value="ProductType" selected>-------Product Type-------</option>
-
 	<option value="Cosmetics_Faces">Cosmetics Faces</option>
 	<option value="Cosmetics_Eye&EyeBrow">Cosmetics Eye&EyeBrow</option>
 	<option value="Cosmetics_Lips&Cheek">Cosmetics Lips&Cheek</option>
@@ -214,8 +215,9 @@
 	<option value="DietarySupplement">DietarySupplement</option>
 
 	</select><br>
-
+    <!--	//User input Product Picture URL, type is URL, If not input or input not URL will show error massagew-->
 	Picture URL:<br><input type="url" required autocomplete="on" name="PictureURL"> <br>
+    <!--//click to add product , will use post method send data to admin_products.php-->
     <button class="submitbtn">Add</button>
 
 </form>

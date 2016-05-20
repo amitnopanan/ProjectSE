@@ -44,12 +44,15 @@ echo "Failed to connect to MySQL: " .mysqli_connect_error();
 </head>
 <body>
 <?php
+//get product ID from ProductID that we select from admin_products.php
 if(isset($_GET['ProductID']))
 {
 $ProductID=$_GET['ProductID'];
+//delete product where ProductID = ProductID that we selected 
 $query1=mysql_query("DELETE FROM product WHERE ProductID='$ProductID'");
 if($query1)
 {
+    //after done with delete go back to admin_products.php
 header('location:admin_products.php');
 }
 }

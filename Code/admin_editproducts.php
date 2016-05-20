@@ -198,6 +198,7 @@ echo "Failed to connect to MySQL: " .mysqli_connect_error();
                     </div>
                 </div>	
 <?php
+//get product ID from ProductID that we select from admin_products.php
 if(isset($_GET['ProductID']))
 {
 $ProductID=$_GET['ProductID'];
@@ -208,9 +209,11 @@ $Price=$_POST['Price'];
 $Quantity=$_POST['Quantity'];
 $ProductType=$_POST['ProductType'];
 $PictureURL=$_POST['PictureURL'];
+//Use sql to update values in to product table 
 $query3=mysql_query("UPDATE product SET ProductName='$ProductName', Price='$Price', Quantity='$Quantity', ProductType='$ProductType', PictureURL='$PictureURL' WHERE ProductID='$ProductID'");
 if($query3)
 {
+    //Print Out Update done! And provide like to go back to Product page(admin_products.php)
 echo 'Update Done! ';
 echo '<a href= "admin_products.php"> Back to Product Page</a>';
 }
@@ -218,6 +221,7 @@ echo '<a href= "admin_products.php"> Back to Product Page</a>';
 $query1=mysql_query("select * from product where ProductID='$ProductID'");
 $query2=mysql_fetch_array($query1);
 ?>
+<!--in every box will show the date of it which is user can see and edit but if user delete in the data and didn’t put any data or put the wrong type of data it will show error -->
 <form method="post" action="">
 	Product Name: <br><input type="text" required autocomplete="on" name="ProductName" value="<?php echo $query2['ProductName'] ?>"><br>
 	Price:<br><input type="number"  name="Price" value="<?php echo $query2['Price'] ?>"><br>
@@ -233,7 +237,9 @@ $query2=mysql_fetch_array($query1);
 	<option value="DietarySupplement">DietarySupplement</option>
 	</select><br>
 	Picture URL:<br><input type="url" required autocomplete="on" name="PictureURL" value="<?php echo $query2['PictureURL'] ?>"> <br>
+    <!--//this button use if user want to recover the data that they change but didn’t update yet -->
     <button class="submitbtn">Recover</button>
+    <!--//this button use to update data into database -->
 <input type="submit" name="submit" value="update" />
 </form>
 <?php
