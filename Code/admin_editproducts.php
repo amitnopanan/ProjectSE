@@ -223,8 +223,8 @@ $query2=mysql_fetch_array($query1);
 	Price:<br><input type="number"  name="Price" value="<?php echo $query2['Price'] ?>"><br>
 	Quantity:<br><input type="number" required autocomplete="on"  name="Quantity" value="<?php echo $query2['Quantity'] ?>"> <br>
 	Product Type:<br>
-	<select name="ProductType" value="<?php echo $query2['ProductType'] ?>"']>
-	<option value="ProductType" >-------Product Type-------</option>
+	<select name="ProductType" >
+	<option value="<?php echo $query2['ProductType'] ?>" >-------Product Type-------</option>
 	<option value="Cosmetics_Faces">Cosmetics Faces</option>
 	<option value="Cosmetics_Eye&EyeBrow">Cosmetics Eye&EyeBrow</option>
 	<option value="Cosmetics_Lips&Cheek">Cosmetics Lips&Cheek</option>

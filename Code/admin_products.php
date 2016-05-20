@@ -231,7 +231,6 @@ $strSQL = "SELECT * FROM user WHERE Email = 'Email' ";
                                         </thead>
                                         <tbody>
 								<?php
-                                
 								while($result = mysqli_fetch_array($query))
 									{
                                             echo "<td>".$result["ProductID"]."</td>";
@@ -244,12 +243,10 @@ $strSQL = "SELECT * FROM user WHERE Email = 'Email' ";
                                   <?php
                                             echo "<td><a href='admin_editproducts.php?ProductID=".$result['ProductID']."'>Edit</a></td>";
                                             echo "<td><a href='admin_deleteproducts.php?ProductID=".$result['ProductID']."'>Delete</a></td><tr>";
-                                  
-                                  
                                   ?>
       								<?php 
                                 echo"</form>";
-                                } ?>	
+                                    } ?>	
                                         </tbody>	
                                     </table>
 								<?php mysqli_close($conn); ?>												
